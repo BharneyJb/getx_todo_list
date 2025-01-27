@@ -10,7 +10,7 @@ class Task extends Equatable {
   const Task({required this.title, 
   required this.icon, 
   required this.color, 
-  this.todos
+  this.todos, required int category
   }); 
 
   Task copyWith({
@@ -23,7 +23,7 @@ class Task extends Equatable {
       title: title ?? this.title,
       icon: icon ?? this.icon,
       color: color ?? this.color,
-      todos: todos ?? this.todos,
+      todos: todos ?? this.todos, category: 0,
     );
   }
 
@@ -32,7 +32,7 @@ class Task extends Equatable {
       title: json['title'],
       icon: json['icon'],
       color: json['color'],
-      todos: json['todos'],
+      todos: json['todos'], category: 0,
     );
   }
 

@@ -81,7 +81,7 @@ class AddCard extends StatelessWidget {
                           int icon = icons[homeCtrl.chipIndex.value].icon!.codePoint;
                           String color = icons[homeCtrl.chipIndex.value].color!.toHex();
                           var task = Task(title: 
-                          homeCtrl.editCtrl.text, icon: icon, color: color);
+                          homeCtrl.editCtrl.text, icon: icon, color: color, category: homeCtrl.chipIndex.value);
                           Get.back();
                           homeCtrl.addTask(task) ? 
                           EasyLoading.showSuccess('Task added successfully') : 
