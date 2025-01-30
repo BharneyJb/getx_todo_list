@@ -38,7 +38,7 @@ class TaskCard extends StatelessWidget {
             StepProgressIndicator(
 
               totalSteps: homeCtrl.isTodosEmpty() ? 1 :task.todos!.length,
-              currentStep: homeCtrl.isTodosEmpty() ? 0 : homeCtrl.getDoneTodo(task).length,
+              currentStep: homeCtrl.isTodosEmpty() ? 0 : homeCtrl.getDoneTodo(task),
               size: 5,
               padding: 0,
               selectedGradientColor: LinearGradient(
